@@ -7,6 +7,9 @@ CREATE TABLE country (
     cID INT UNSIGNED AUTO_INCREMENT,
     rID INT UNSIGNED,
     orgID INT UNSIGNED,
+        orgID INT UNSIGNED,
+    FOREIGN KEY (orgID)
+        REFERENCES organizations (orgID),
     FOREIGN KEY (rID) REFERENCES region(rID),
     PRIMARY KEY(cID,rID),
     cName VARCHAR(90) NOT NULL,
